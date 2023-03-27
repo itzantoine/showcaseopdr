@@ -1,0 +1,30 @@
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Invoeren uren</title>
+    <script src="js/site.js"></script>
+</head>
+<body>
+<div id="addActivityModal" class="modal">
+    <span class="close">&times;</span>
+    <div class="modal-content">
+        <form class="AddActivityForm">
+            <label>Taak</label>
+            <input type="text" name="task"/>
+            <label>Datum</label>
+            <input type="date" name="date"/>
+            <label>Starttijd</label>
+            <input type="time" name="startTime"/>
+            <label>Eindtijd</label>
+            <input type="time" name="endTime"/>
+            <button type="button" onclick="location.href='@Url.Action("AddActivity", "Activity")'">Uren invoeren</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+@{
+    ViewData["Title"] = "Activiteiten";
+}
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>Activiteiten</title>
+</head>
+<body>
+<div>
+    <div class="ActivityHeader">
+        <button class="SendMail">Mail versturen</button>
+        <div class="ActivityHeaderBar">
+            <div class="ActivityPrevious">
+                <button class="PreviousBtn" value="<-"></button>
+            </div>
+            <div class="HeaderBarWeekNr">
+                <p>Week test</p>
+            </div>
+            <div class="ActivityNext">
+                <button class="NextBtn" value="->"></button>
+            </div>
+        </div>
+        <button class="EditActivity" id="EditActivity">Uren aanpassen</button>
+        <button class="AddActivity" id="AddActivity">Uren toevoegen</button>
+    </div>
+    <div class="ActivityTable">
+        <table>
+            <tr>
+                <th>Naam</th>
+                <th>Maandag</th>
+                <th>Dinsdag</th>
+                <th>Woensdag</th>
+                <th>Donderdag</th>
+                <th>Vrijdag</th>
+                <th>Totaal</th>
+            </tr>
+            <tr>
+                <td>Test</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>15</td>
+            </tr>
+        </table>
+    </div>
+    <div id="addActivityModal" class="modal">
+       <span class="close">&times;</span>
+       <div class="modal-content">
+           <form class="AddActivityForm">
+               <label>Taak</label>
+               <input type="text" name="task"/>
+               <label>Datum</label>
+               <input type="date" name="date"/>
+               <label>Starttijd</label>
+               <input type="time" name="startTime"/>
+               <label>Eindtijd</label>
+               <input type="time" name="endTime"/>
+               <button type="button" onclick="location.href='@Url.Action("AddActivity", "Activity")'">Uren invoeren</button>
+           </form>
+       </div>
+   </div>
+</div>
+</body>
+</html>
